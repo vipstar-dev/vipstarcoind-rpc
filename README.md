@@ -1,22 +1,22 @@
-htmlcoind-rpc.js
+vipstarcoind-rpc.js
 ===============
 
-A client library to connect to HTMLCOIN Core RPC in JavaScript.
+A client library to connect to VIPSTARCOIN Core RPC in JavaScript.
 
 ## Get Started
 
-htmlcoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+vipstarcoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install htmlcoind-rpc
+npm install vipstarcoind-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var htmlcoincore = require('htmlcoincore');
-  var RpcClient = require('htmlcoind-rpc');
+  var vipstarcoincore = require('vipstarcoincore');
+  var RpcClient = require('vipstarcoind-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new htmlcoincore.Transaction(rawtx.result);
+          var tx = new vipstarcoincore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
